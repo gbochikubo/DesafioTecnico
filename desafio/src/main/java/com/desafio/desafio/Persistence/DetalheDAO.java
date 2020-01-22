@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
+/** Classe DetalheDAO responsável pelo acesso das informações dos Detalhes no banco de dados **/
+
 public interface DetalheDAO extends CrudRepository<Detalhe, Long> {
 	
 	Detalhe findById(long id);

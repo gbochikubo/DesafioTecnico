@@ -4,6 +4,8 @@ package com.desafio.desafio.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
+/** Classe que representa um Trailer **/
+
 @Entity
 public class Trailer implements Serializable{
 	

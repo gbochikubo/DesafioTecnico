@@ -8,8 +8,9 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-@Configuration
+/** Classe de Configuração do Banco de Dados **/
 
+@Configuration
 public class DataConfiguration {
 
 	@Bean

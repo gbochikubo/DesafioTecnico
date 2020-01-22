@@ -12,21 +12,20 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/** Classe que representa um Detalhe **/
+
 @Entity
 public class Detalhe implements Serializable{
 	
-
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long codigo;
     
-
 	private static final int tipoRegistro = 1;
 	
-	private int estabelecimento;
-	
+	private int estabelecimento;	
 	@Temporal(TemporalType.DATE)
 	private Date dataInicial;
 	@Temporal(TemporalType.DATE)
@@ -38,23 +37,23 @@ public class Detalhe implements Serializable{
 	private String numSerieLeitor;
 	private String codigoTransacao;
 	private String codigoPedido;
-	private int valorTotal;
-	private int valorParcela;
+	private double valorTotal;
+	private double valorParcela;
 	private String pagamento;
 	private String plano;
 	private String parcela;
 	private int quantidadeParcelas;
 	@Temporal(TemporalType.DATE)
 	private Date dataPrevista;
-	private int taxaParcelamentoComprador;
-	private int tarifaComprador;
-	private int valorOriginal;
-	private int taxaParcelamentoVendedor;
-	private int taxaIntermediacao;
-	private int tarifaIntermediacao;
-	private int tarifaVendedor;
-	private int repasseAplicacao;
-	private int valorLiquidoTransacao;
+	private double taxaParcelamentoComprador;
+	private double tarifaComprador;
+	private double valorOriginal;
+	private double taxaParcelamentoVendedor;
+	private double taxaIntermediacao;
+	private double tarifaIntermediacao;
+	private double tarifaVendedor;
+	private double repasseAplicacao;
+	private double valorLiquidoTransacao;
 	private int statusPagamento;
 	private String filler;
 	private int meioPagamento;
@@ -138,19 +137,19 @@ public class Detalhe implements Serializable{
 	public void setCodigoPedido(String codigoPedido) {
 		this.codigoPedido = codigoPedido;
 	}
-	public int getTarifaComprador() {
+	public double getTarifaComprador() {
 		return tarifaComprador;
 	}
-	public void setTarifaComprador(int tarifaComprador) {
+	public void setTarifaComprador(double tarifaComprador) {
 		this.tarifaComprador = tarifaComprador;
 	}
-	public int getValorTotal() {
+	public double getValorTotal() {
 		return valorTotal;
 	}
-	public void setValorTotal(int valorTotal) {
+	public void setValorTotal(double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
-	public int getValorParcela() {
+	public double getValorParcela() {
 		return valorParcela;
 	}
 	public void setValorParcela(int valorParcela) {
@@ -180,49 +179,49 @@ public class Detalhe implements Serializable{
 	public void setQuantidadeParcelas(int quantidadeParcelas) {
 		this.quantidadeParcelas = quantidadeParcelas;
 	}
-	public int getTaxaParcelamentoComprador() {
+	public double getTaxaParcelamentoComprador() {
 		return taxaParcelamentoComprador;
 	}
-	public void setTaxaParcelamentoComprador(int taxaParcelamentoComprador) {
+	public void setTaxaParcelamentoComprador(double taxaParcelamentoComprador) {
 		this.taxaParcelamentoComprador = taxaParcelamentoComprador;
 	}
-	public int getValorOriginal() {
+	public double getValorOriginal() {
 		return valorOriginal;
 	}
-	public void setValorOriginal(int valorOriginal) {
+	public void setValorOriginal(double valorOriginal) {
 		this.valorOriginal = valorOriginal;
 	}
-	public int getTaxaParcelamentoVendedor() {
+	public double getTaxaParcelamentoVendedor() {
 		return taxaParcelamentoVendedor;
 	}
-	public void setTaxaParcelamentoVendedor(int taxaParcelamentoVendedor) {
+	public void setTaxaParcelamentoVendedor(double taxaParcelamentoVendedor) {
 		this.taxaParcelamentoVendedor = taxaParcelamentoVendedor;
 	}
-	public int getTaxaIntermediacao() {
+	public double getTaxaIntermediacao() {
 		return taxaIntermediacao;
 	}
-	public void setTaxaIntermediacao(int taxaIntermediacao) {
+	public void setTaxaIntermediacao(double taxaIntermediacao) {
 		this.taxaIntermediacao = taxaIntermediacao;
 	}
-	public int getTarifaIntermediacao() {
+	public double getTarifaIntermediacao() {
 		return tarifaIntermediacao;
 	}
 	public void setTarifaIntermediacao(int tarifaIntermediacao) {
 		this.tarifaIntermediacao = tarifaIntermediacao;
 	}
-	public int getTarifaVendedor() {
+	public double getTarifaVendedor() {
 		return tarifaVendedor;
 	}
 	public void setTarifaVendedor(int tarifaVendedor) {
 		this.tarifaVendedor = tarifaVendedor;
 	}
-	public int getRepasseAplicacao() {
+	public double getRepasseAplicacao() {
 		return repasseAplicacao;
 	}
 	public void setRepasseAplicacao(int repasseAplicacao) {
 		this.repasseAplicacao = repasseAplicacao;
 	}
-	public int getValorLiquidoTransacao() {
+	public double getValorLiquidoTransacao() {
 		return valorLiquidoTransacao;
 	}
 	public void setValorLiquidoTransacao(int valorLiquidoTransacao) {

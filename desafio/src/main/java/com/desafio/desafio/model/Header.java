@@ -12,6 +12,8 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 
+/** Classe que representa um Header **/
+
 @Entity
 public class Header implements Serializable {
 
@@ -19,16 +21,9 @@ public class Header implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long codigo;
-    
+    private long codigo;   
 	private static final int tipoRegistro = 0;
 	private int estabelecimento;
-	public long getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
 	@Temporal(TemporalType.DATE)
 	private Date dataProcessamento;
 	@Temporal(TemporalType.DATE)
@@ -44,6 +39,12 @@ public class Header implements Serializable {
 	private String reservadoFuturo;
 	
 	
+	public long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}	
 	public int getEstabelecimento() {
 		return estabelecimento;
 	}
@@ -112,8 +113,6 @@ public class Header implements Serializable {
 	}
 	public static int getTiporegistro() {
 		return tipoRegistro;
-	}
-	
- 
+	}	
 
 }
