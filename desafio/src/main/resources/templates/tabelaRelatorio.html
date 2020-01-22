@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	
+<head>
+	<title>Pagina Relatorio</title>
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<style>
+div.centralizacao{
+	text-align: center;
+}
+</style>
+	<!--JavaScript at end of body for optimized loading-->
+	<div class = "centralizacao"><h3>Headers</h3></div>
+	
+	<table class="centered">
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Tipo de Registro</th>
+        		<th>Estabelecimento</th>
+        		<th>Data de Processamento</th>
+        		<th>Periodo Inicial</th>
+        		<th>Periodo Final</th>
+        		<th>Sequencia</th>
+        		<th>Empresa Adquirente</th>
+        		<th>Tipo de Extrato</th>
+        		<th>Filler</th>
+        		<th>Versao Layout</th>
+        		<th>Versao Release </th>
+        		<th>Reservado Para Uso Futuro</th>
+			</tr>	
+		</thead>
+		<tbody>
+		    <tr th:each="header : ${headers}">
+		    	<td><span th:text="${header.codigo}"></span></td>
+		    	<td><span th:text="0"></span></td>
+		    	<td><span th:text="${header.estabelecimento}"></span></td>
+        		<td><span th:text="${header.dataProcessamento}"></span></td>
+          		<td><span th:text="${header.periodoInicial}"></span></td>
+          		<td><span th:text="${header.periodoFinal}"></span></td>
+          		<td><span th:text="${header.sequencia}"></span></td>
+          		<td><span th:text="${header.empresaAdquirente}"></span></td>
+          		<td><span th:text="${header.tipoExtrato}"></span></td>
+          		<td><span th:text="${header.filler}"></span></td>
+          		<td><span th:text="${header.versaoLayout}"></span></td>
+          		<td><span th:text="${header.versaoRelease}"></span></td>
+          		<td><span th:text="${header.reservadoFuturo}"></span></td>
+        	
+			</tr>
+		</tbody>	
+	</table>
+	<div class = "centralizacao"><h3>Detalhes</h3></div>
+	<table class="centered">
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Tipo de Registro</th>
+        		<th>Estabelecimento</th>
+        		<th>Data inicial da Transacao</th>
+        		<th>Data do Evento</th>
+        		<th>Hora do Evento</th>
+        		<th>Tipo do Evento</th>
+        		<th>Tipo de Transacao</th>
+        		<th>Numero de Serie do Leitor</th>
+        		<th>Codigo da Transacao</th>
+        		<th>Codigo do Pedido</th>
+        		<th>Valor Total da Transacao</th>
+        		<th>Valor da Parcela/Liquido Total</th>
+        		<th>Pagamento</th>
+        		<th>Plano</th>
+        		<th>Parcela</th>
+        		<th>Quantidade de Parcelas da Transacao</th>
+        		<th>Data Prevista De Pagamento</th>
+        		<th>Taxa de Parcelamento Comprador</th>
+        		<th>Tarifa Boleto Bomprador </th>
+        		<th>Valor Original da Transacao</th>
+        		<th>Taxa de Parcelamento Vendedor</th>
+        		<th>Taxa de Intermediacao</th>
+        		<th>Tarifa de Intermediacao</th>
+       			<th>Tarifa Boleto Vendedor</th>
+        		<th>Repasse Aplicacao</th>
+        		<th>Valor Liquido da Transacao</th>
+        		<th>Status do Pagamento</th>
+        		<th>Filler</th>
+        		<th>Meio de Pagamento</th>
+        		<th>Instituicao Financeira/Bandeira</th>
+        		<th>Canal de Entrada</th>
+        		<th>Leitor</th>
+        		<th>Meio de Captura</th>
+        		<th>Numero Logico</th>
+        		<th>NSU</th>
+        		<th>Filler</th>
+        		<th>Cartao Bin</th>
+        		<th>Cartao Holder</th>
+        		<th>Codigo de Autorizacao</th>
+        		<th>Codigo CV</th>
+        		<th>Reservado Para Usos Futuros</th>
+			</tr>
+		</thead>
+		<tbody>
+    <tr th:each="detalhe : ${detalhes}">
+    	<td><span th:text="${detalhe.codigo}"></span></td>
+        <td><span th:text="${1}"></span></td>
+        <td><span th:text="${detalhe.estabelecimento}"></span></td>
+        <td><span th:text="${detalhe.dataInicial}"></span></td>
+        <td><span th:text="${detalhe.dataEvento}"></span></td>
+        <td><span th:text="${detalhe.horaEvento}"></span></td>
+        <td><span th:text="${detalhe.tipoEvento}"></span></td>
+        <td><span th:text="${detalhe.tipoTransacao}"></span></td>
+        <td><span th:text="${detalhe.numSerieLeitor}"></span></td>
+        <td><span th:text="${detalhe.codigoTransacao}"></span></td>
+        <td><span th:text="${detalhe.codigoPedido}"></span></td>
+        <td><span th:text="${detalhe.valorTotal}"></span></td>
+        <td><span th:text="${detalhe.valorParcela}"></span></td>
+        <td><span th:text="${detalhe.pagamento}"></span></td>
+        <td><span th:text="${detalhe.plano}"></span></td>
+        <td><span th:text="${detalhe.parcela}"></span></td>
+        <td><span th:text="${detalhe.quantidadeParcelas}"></span></td>
+        <td><span th:text="${detalhe.dataPrevista}"></span></td>
+        <td><span th:text="${detalhe.taxaParcelamentoComprador}"></span></td>
+        <td><span th:text="${detalhe.tarifaComprador}"></span></td>
+        <td><span th:text="${detalhe.valorOriginal}"></span></td>
+        <td><span th:text="${detalhe.taxaParcelamentoVendedor}"></span></td>
+        <td><span th:text="${detalhe.taxaIntermediacao}"></span></td>
+        <td><span th:text="${detalhe.tarifaIntermediacao}"></span></td>
+        <td><span th:text="${detalhe.tarifaVendedor}"></span></td>
+        <td><span th:text="${detalhe.repasseAplicacao}"></span></td>
+        <td><span th:text="${detalhe.valorLiquidoTransacao}"></span></td>
+        <td><span th:text="${detalhe.statusPagamento}"></span></td>
+        <td><span th:text="${detalhe.filler}"></span></td>
+        <td><span th:text="${detalhe.meioPagamento}"></span></td>
+        <td><span th:text="${detalhe.instituicaoFinanceira}"></span></td>
+        <td><span th:text="${detalhe.canalEntrada}"></span></td>
+        <td><span th:text="${detalhe.leitor}"></span></td>
+        <td><span th:text="${detalhe.meioCaptura}"></span></td>
+        <td><span th:text="${detalhe.numLogico}"></span></td>
+        <td><span th:text="${detalhe.nsu}"></span></td>
+        <td><span th:text="${detalhe.outroFiller}"></span></td>
+        <td><span th:text="${detalhe.cartaoBin}"></span></td>
+        <td><span th:text="${detalhe.cartaoHolder}"></span></td>
+        <td><span th:text="${detalhe.codigoAutorizacao}"></span></td>
+        <td><span th:text="${detalhe.codigoCv}"></span></td>
+        <td><span th:text="${detalhe.reservadoFuturos}"></span></td>
+    </tr>
+    </tbody>
+    
+	</table >
+	<div class = "centralizacao"><h3>Trailers</h3></div>
+	<table class="centered">
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Tipo de Registro</th>
+				<th>Total de Registro</th>
+				<th>Reservado Para Usos Futuros</th>
+			</tr>
+		</thead>
+	<tbody>
+    <tr th:each="trailer : ${trailers}">
+    	<td><span th:text="${trailer.codigo}"></span></td>
+        <td><span th:text="9"></span></td>
+        <td><span th:text="${trailer.totalRegistro}"></span></td>
+        <td><span th:text="${trailer.reservadoFuturo}"></span></td>
+    </tr>
+    </tbody>
+    </table>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+
+</html>
