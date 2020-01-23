@@ -26,7 +26,7 @@ Abrir o terminal ou cmd e criar o banco de dados mysql, comandos:
  
  ![DataConfiguration](https://user-images.githubusercontent.com/37846911/72956655-4cfcd380-3d7f-11ea-8592-567aafdf897b.png)
  
- <h3> Execução do Programa <h3>
+ # <h3> Execução do Programa <h3>
   
 Abrir o Eclipse e executar o programa na classe principal DesafioApplication.java
 
